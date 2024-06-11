@@ -1,10 +1,6 @@
 import { CollectionConfig, Access } from "payload/types";
 import { User } from "@/payload-types";
 
-import {
-    lexicalEditor
-  } from '@payloadcms/richtext-lexical'
-
 const isAdminOrHasAccess =
   (): Access =>
   ({ req: { user: _user } }) => {
