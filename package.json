@@ -24,6 +24,7 @@
     "payload": "^3.0.0-beta.43",
     "react": "^18",
     "react-dom": "^18",
+    "react-use": "^17.5.0",
     "sharp": "^0.33.4",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
