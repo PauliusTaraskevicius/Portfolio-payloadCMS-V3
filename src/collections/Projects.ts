@@ -41,6 +41,11 @@ export const Projects: CollectionConfig = {
     update: isAdminOrHasAccess(),
     delete: isAdminOrHasAccess(),
   },
+  versions: {
+    drafts: {
+      autosave: true
+    }
+  },
   fields: [
     {
       name: "name",

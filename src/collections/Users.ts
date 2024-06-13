@@ -14,10 +14,11 @@ const Users: CollectionConfig = {
   slug: "users",
   auth: true,
   access: {
-    read: adminsAndUser,
+    read: () => true,
     create: () => true,
-    update: ({ req }) => req.user.email === process.env.PAYLOAD_ADMIN_EMAIL,
-    delete: ({ req }) => req.user.email === process.env.PAYLOAD_ADMIN_EMAIL,
+    // ({ req }) => req.user.email === process.env.PAYLOAD_ADMIN_EMAIL,
+    update: () => true,
+    delete: () => true,
   },
   admin: {
     useAsTitle: "email",
