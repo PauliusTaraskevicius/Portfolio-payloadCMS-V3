@@ -7,18 +7,19 @@ import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
 import { useMedia } from "react-use";
-import { Share2 } from "lucide-react";
+import { FacebookIcon, Share2 } from "lucide-react";
 import { Menu } from "lucide-react";
+import { Home } from "lucide-react";
+import { User } from "lucide-react";
+import { BriefcaseBusiness } from "lucide-react";
+import { Mail } from "lucide-react";
+import { Facebook } from "lucide-react";
+import { Linkedin } from "lucide-react";
+import { Github } from "lucide-react";
 
 import { Button } from "../ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Separator } from "@/components/ui/separator";
 
 import { Wrapper } from "../wrapper";
 import { NavigationItem } from "./navigation-item";
@@ -27,18 +28,22 @@ const routes = [
   {
     label: "Home",
     href: "/",
+    icon: <Home />,
   },
   {
     label: "About",
     href: "/about",
+    icon: <User />,
   },
   {
     label: "Portfolio",
     href: "/portfolio",
+    icon: <BriefcaseBusiness />,
   },
   {
     label: "Contact",
     href: "/contact",
+    icon: <Mail />,
   },
 ];
 
@@ -90,10 +95,44 @@ export const Navigation = () => {
                 onClick={() => onClick(route.href)}
                 className="w-full justify-start"
               >
-                {route.label}
+                {route.icon}
+                <p className="pl-2">{route.label}</p>
               </Button>
             ))}
           </nav>
+          <Separator className="my-2" />
+          <div className="flex flex-col space-y-2">
+            <a
+              href="https://linkedin.com/in/paulius-taraškevičius-916b83234"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" className="w-full justify-start border-none hover:bg-primary hover:text-primary-foreground">
+                <Linkedin className="w-6 h-6" />
+                <p className="pl-2 ">/paulius-taraskevicius</p>
+              </Button>
+            </a>
+            <a
+              href="https://www.facebook.com/paulius.taraskevicius"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" className="w-full justify-start border-none hover:bg-primary hover:text-primary-foreground">
+                <Facebook className="w-6 h-6" />
+                <p className="pl-2">/paulius.taraskevicius</p>
+              </Button>
+            </a>
+            <a
+              href="https://github.com/PauliusTaraskevicius"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" className="w-full justify-start border-none hover:bg-primary hover:text-primary-foreground">
+                <Github className="w-6 h-6" />
+                <p className="pl-2">/pauliustaraskevicius</p>
+              </Button>
+            </a>
+          </div>
         </SheetContent>
       </Sheet>
     );

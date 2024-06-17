@@ -8,13 +8,13 @@ const Homepage = async () => {
 
   return (
     <div>
-      {/* {(await payload).docs.map((project) => (
+      {(await payload).docs.map((project) => (
         <div key={project.id}>
           <Link href={`/projects/${project.slug}`}>
             <h1>{project.name}</h1>
           </Link>
         </div>
-      ))} */}
+      ))}
     </div>
   );
 };
