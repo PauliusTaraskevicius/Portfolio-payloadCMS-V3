@@ -10,11 +10,15 @@ type Props = {
 
 export const NavigationItem = ({ label, href, isActive }: Props) => {
   return (
-    <div className="flex items-center px-4 bg-white">
+    <div className="flex justify-start items-center px-2">
       <Link
         href={href}
         className={cn(
-          "font-semibold text-lg",
+          buttonVariants({
+            size: "sm",
+            variant: "none",
+            className: "font-semibold text-lg",
+          }),
           isActive &&
             buttonVariants({
               size: "sm",
