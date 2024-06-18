@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-export const Wrapper = ({
+export const ContentWrapper = ({
   children,
   className,
 }: {
@@ -10,7 +10,7 @@ export const Wrapper = ({
   return (
     <div
       className={cn(
-        "h-full w-full mx-auto max-w-screen-xl px-2.5",
+        "h-full w-full mx-auto max-w-screen-xl px-2.5 ",
         className
       )}
     >

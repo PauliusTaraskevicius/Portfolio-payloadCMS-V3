@@ -21,7 +21,7 @@ import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Separator } from "@/components/ui/separator";
 
-import { Wrapper } from "../wrapper";
+import { ContentWrapper } from "../content-wrapper";
 import { NavigationItem } from "./navigation-item";
 
 const routes = [
@@ -62,8 +62,9 @@ export const Navigation = () => {
 
   if (isMobile) {
     return (
+
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        <SheetTrigger className="w-full p-3">
+        <SheetTrigger className="w-full p-3 backdrop-blur-lg transition-all ">
           <div className="flex justify-between items-center">
             <Button
               variant="outline"
@@ -107,7 +108,10 @@ export const Navigation = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline" className="w-full justify-start border-none hover:bg-primary hover:text-primary-foreground">
+              <Button
+                variant="outline"
+                className="w-full justify-start border-none hover:bg-primary hover:text-primary-foreground"
+              >
                 <Linkedin className="w-6 h-6" />
                 <p className="pl-2 ">/paulius-taraskevicius</p>
               </Button>
@@ -117,7 +121,10 @@ export const Navigation = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline" className="w-full justify-start border-none hover:bg-primary hover:text-primary-foreground">
+              <Button
+                variant="outline"
+                className="w-full justify-start border-none hover:bg-primary hover:text-primary-foreground"
+              >
                 <Facebook className="w-6 h-6" />
                 <p className="pl-2">/paulius.taraskevicius</p>
               </Button>
@@ -127,7 +134,10 @@ export const Navigation = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline" className="w-full justify-start border-none hover:bg-primary hover:text-primary-foreground">
+              <Button
+                variant="outline"
+                className="w-full justify-start border-none hover:bg-primary hover:text-primary-foreground"
+              >
                 <Github className="w-6 h-6" />
                 <p className="pl-2">/pauliustaraskevicius</p>
               </Button>
@@ -140,7 +150,7 @@ export const Navigation = () => {
 
   return (
     <nav className="hidden lg:flex sticky inset-x-0 top-0 w-full h-[6rem] backdrop-blur-lg transition-all">
-      <Wrapper className="flex items-center space-x-4">
+      <ContentWrapper className="flex items-center space-x-4">
         <div className="flex items-center">
           <Link href="/">
             <Button
@@ -187,7 +197,7 @@ export const Navigation = () => {
             </a>
           </div>
         </div>
-      </Wrapper>
+      </ContentWrapper>
     </nav>
   );
 };

@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en"> 
       <body className={inter.className}>
       {/* bg-gradient-to-b dark:from-slate-950 dark:to-slate-900 from-slate-50 to-red-100 */}
-        <div className="h-full bg-gradient-to-b from-slate-50 to-red-100">
+        <div className="lg:h-full bg-gradient-to-b from-slate-50 to-red-100">
           <Navigation />
           {children}
         </div>
