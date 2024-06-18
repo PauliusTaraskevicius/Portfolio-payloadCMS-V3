@@ -11,6 +11,13 @@ body,
   padding: 0px;
 }
 
+.box {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
