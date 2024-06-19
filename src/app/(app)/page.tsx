@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ContentWrapper } from "@/components/content-wrapper";
 import { getProjects } from "@/actions/get-projects";
 import Image from "next/image";
@@ -7,22 +6,25 @@ import { Button } from "@/components/ui/button";
 
 const Homepage = async () => {
   const payload = await getProjects();
+  {
+    (" ");
+  }
+  {
+    /* {(await payload).docs.map((project) => (
+<div key={project.id}>
+  <Link href={`/projects/${project.slug}`}>
+    <h1>{project.name}</h1>
+  </Link>
+</div>
+))} */
+  }
 
   return (
     <div>
       <section>
         <ContentWrapper className="flex justify-center items-center pb-24 pt-10 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-52 lg:pb-52">
-          {" "}
-          {/* {(await payload).docs.map((project) => (
-        <div key={project.id}>
-          <Link href={`/projects/${project.slug}`}>
-            <h1>{project.name}</h1>
-          </Link>
-        </div>
-      ))} */}
-
           <div className="w-full flex flex-col lg:flex-row justify-center gap-x-4">
-            <div className="flex justify-center w-full h-1/2 lg:w-1/2">
+            <div className="flex justify-center w-full  h-1/2 lg:w-1/2">
               <Image
                 src="/website.svg"
                 width={600}
@@ -38,9 +40,8 @@ const Homepage = async () => {
                 based in Lithuania
               </h1>
               <p className="whitespace-pre-wrap text-lg lg:leading-relaxed">
-                Creating web applications as my hobby and full time job.I create
-                custom websites, complex systems to help businesses do better
-                online.Self-taught frontend developer, I specialize in creating
+                Creating web applications as my hobby and full time job.As a
+                self-taught frontend developer, I specialize in creating
                 dynamic, responsive solutions that empower businesses to thrive
                 in today&apos;s digital landscape. With technologies such as
                 Javascript, HTML and CSS, React, Python.Let&apos;s unlock your

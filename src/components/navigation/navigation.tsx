@@ -16,6 +16,7 @@ import { Mail } from "lucide-react";
 import { Facebook } from "lucide-react";
 import { Linkedin } from "lucide-react";
 import { Github } from "lucide-react";
+import { FileText } from 'lucide-react';
 
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -41,6 +42,11 @@ const routes = [
     icon: <BriefcaseBusiness />,
   },
   {
+    label: "Resume",
+    href: "/resume",
+    icon: <FileText />,
+  },
+  {
     label: "Contact",
     href: "/contact",
     icon: <Mail />,
@@ -64,7 +70,7 @@ export const Navigation = () => {
     return (
 
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        <SheetTrigger className="w-full p-3 backdrop-blur-lg transition-all ">
+        <SheetTrigger className="w-full p-3 backdrop-blur-lg transition-all">
           <div className="flex justify-between items-center">
             <Button
               variant="outline"
@@ -149,7 +155,7 @@ export const Navigation = () => {
   }
 
   return (
-    <nav className="hidden lg:flex sticky inset-x-0 top-0 w-full h-[6rem] backdrop-blur-lg transition-all">
+    <nav className="hidden lg:flex sticky inset-x-0 top-0 w-full h-[6rem] backdrop-blur-lg transition-all z-[99999]">
       <ContentWrapper className="flex items-center space-x-4">
         <div className="flex items-center">
           <Link href="/">
