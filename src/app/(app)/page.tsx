@@ -5,19 +5,6 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const Homepage = async () => {
-  const payload = await getProjects();
-  {
-    (" ");
-  }
-  {
-    /* {(await payload).docs.map((project) => (
-<div key={project.id}>
-  <Link href={`/projects/${project.slug}`}>
-    <h1>{project.name}</h1>
-  </Link>
-</div>
-))} */
-  }
 
   return (
     <div>

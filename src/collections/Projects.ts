@@ -65,15 +65,15 @@ export const Projects: CollectionConfig = {
       label: "Project description",
     },
     {
-      name: "images",
+      name: "image",
       type: "array",
-      label: "Project images",
+      label: "Project image",
       minRows: 1,
       maxRows: 4,
       required: true,
       labels: {
         singular: "Image",
-        plural: "images",
+        plural: "image",
       },
       fields: [
         {

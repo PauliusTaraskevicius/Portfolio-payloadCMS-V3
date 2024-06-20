@@ -32,17 +32,17 @@ const AboutPage = () => {
                 height={150}
                 className="absolute -left-6 object-cover animate-bounce"
                 alt="mouse"
+                loading="lazy"
               />
             </a>
           </div>
         </div>
 
-        <div id="skills" className="flex items-center w-full lg:w-2/3">
+        <div id="skills" className="flex items-center w-full lg:w-2/3 py-24 lg:py-96">
           <div className="flex flex-col space-y-12">
             <h2 className="text-4xl font-normal md:text-5xl lg:leading-normal uppercase">
               Skills
             </h2>
-
             <div className="flex flex-row flex-wrap gap-2">
               <Button
                 variant="default"
@@ -138,12 +138,12 @@ const AboutPage = () => {
 
         <div
           id="work"
-          className="flex flex-col justify-center items-center space-y-4"
+          className="flex flex-col justify-center items-center space-y-4 py-24 lg:py-96"
         >
           <Link href="/portfolio">
             <Button
               variant="default"
-              className="w-[300px] h-[50px] hover:bg-white hover:text-primary"
+              className="w-[300px] h-[55px] hover:bg-white hover:text-primary text-3xl"
             >
               View my Work
             </Button>
@@ -152,20 +152,20 @@ const AboutPage = () => {
           <Link href="/resume">
             <Button
               variant="default"
-              className="w-[300px] h-[50px] hover:bg-white hover:text-primary"
+              className="w-[300px] h-[55px] hover:bg-white hover:text-primary text-3xl"
             >
               View my Resume
             </Button>
           </Link>
-          <p>OR</p>
+          <p className="text-3xl">OR</p>
 
           <Link href="/contact">
             {" "}
             <Button
               variant="link"
-              className="w-[300px] h-[50px] hover:bg-white hover:text-primary"
+              className="w-[300px] h-[55px] text-3xl"
             >
-              View my Resume
+              Contact Me
             </Button>
           </Link>
         </div>
