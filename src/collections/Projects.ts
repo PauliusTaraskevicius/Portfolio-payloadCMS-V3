@@ -43,8 +43,8 @@ export const Projects: CollectionConfig = {
   },
   versions: {
     drafts: {
-      autosave: true
-    }
+      autosave: true,
+    },
   },
   fields: [
     {
@@ -68,8 +68,7 @@ export const Projects: CollectionConfig = {
       name: "image",
       type: "array",
       label: "Project image",
-      minRows: 1,
-      maxRows: 4,
+
       required: true,
       labels: {
         singular: "Image",

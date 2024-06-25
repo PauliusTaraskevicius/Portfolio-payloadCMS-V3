@@ -7,8 +7,6 @@ import { ProjectCard } from "./_components/project-card";
 const PortfolioPage = async () => {
   const payload = await getProjects()
 
-  console.log(payload.docs.map((item) => item.image));
-
   return (
     <ContentWrapper className="flex justify-center items-center pb-24 pt-10 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-52 lg:pb-52 bg-red-200">
       <div className="flex justify-center items-center w-full h-full">
@@ -24,7 +22,7 @@ const PortfolioPage = async () => {
           />
           {payload.docs.map((item) => (
             <Link key={item.id} href={`/portfolio/${item.id}`}>
-              <h1>{item.name}</h1>
+              <h1>{item.name} i projekta</h1>
             </Link>
             // <img
             //   key={item.id}
@@ -36,7 +34,7 @@ const PortfolioPage = async () => {
           <section className="relative h-[300vh] bg-neutral-300">
             <div className="sticky top-0 h-screen flex items-center overflow-hidden">
               <div className="flex gap-4">
-                {(await payload).docs.map((project) => (
+                {/* {(await payload).docs.map((project) => (
                   <div key={project.id}>
                     <ProjectCard
                       name={project.name}
@@ -44,7 +42,7 @@ const PortfolioPage = async () => {
                       image={project.image}
                     />
                   </div>
-                ))}
+                ))} */}
               </div>
             </div>
           </section>

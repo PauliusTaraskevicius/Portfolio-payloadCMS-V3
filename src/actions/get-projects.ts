@@ -17,10 +17,12 @@ export const getProjects = async () => {
 export const getProject = async (id: string) => {
   const db = await getPayloadHMR({ config: configPromise });
 
-  const project = payload.findByID({
+  const project = db.findByID({
     collection: "projects",
     id: id,
   });
+
+  
 
   return project;
 };
